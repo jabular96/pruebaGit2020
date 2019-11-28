@@ -17,10 +17,15 @@ public class EjerciosBasicosJava {
         return true;
         }
         if(numBellotas >=40 && numBellotas <=60){
-            return true;
+          return true; 
         }
         return false;
     }
+    public int multa (int velocidad, boolean birthday){
+    return 0;
+    }
+        
+    
 
     /**
      * @param args the command line arguments
