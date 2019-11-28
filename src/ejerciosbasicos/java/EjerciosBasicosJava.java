@@ -12,17 +12,27 @@ package ejerciosbasicos.java;
  */
 
 public class EjerciosBasicosJava {
+    
     public boolean fiestaArdillas(int numBellotas, boolean finDeSemana){
         if(finDeSemana){
         return true;
         }
-        if(numBellotas >=40 && numBellotas <=60){
-          return true; 
+        if (numBellotas >=40 && numBellotas <=60){
+            return true;
         }
         return false;
     }
     public int multa (int velocidad, boolean birthday){
-    return 0;
+        if(birthday){
+            velocidad -= 5;
+        }
+        if(velocidad <= 60){
+            return 0;
+        }
+        if(velocidad > 60 && velocidad <= 80){
+          return 1;  
+        }
+    return 2; //resto de casos
     }
         
     
@@ -33,9 +43,14 @@ public class EjerciosBasicosJava {
     public static void main(String[] args) {
         // TODO code application logic here
         EjerciciosBasicosJava ejercicios = new EjerciciosBasicosJava();
-        System.out.print(ejercicios.fiestaArdillas(30, false));
-        System.out.print(ejercicios.fiestaArdillas(50, true));
-        System.out.print(ejercicios.fiestaArdillas(70, true));
+        System.out.println(ejercicios.fiestaArdillas(30, false));
+        System.out.println(ejercicios.fiestaArdillas(50, true));
+        System.out.println(ejercicios.fiestaArdillas(70, true));
+        //testeo ej 2
+        System.out.println(ejercicios.multa(60, false));
+        System.out.println(ejercicios.multa(65, false));
+        System.out.println(ejercicios.multa(65, true));
+        
         
     }
     
